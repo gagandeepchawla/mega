@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inline</title>
+</head>
+<style type="text/css">
+	.floating-box{
+		float: left;
+		width: 150px;
+		height: 100px;
+		margin: 10px;
+		border: 10px solid blue; 
+	}
+	.after-box{
+		clear: left;
+	}
+</style>
+<body>
+<h2>The Old Way - using float</h2>
+
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+<div class="floating-box">Floating box</div>
+
+<div class="after-box">Another box, after the floating boxes...</div>
+
+</body>
+</html>
