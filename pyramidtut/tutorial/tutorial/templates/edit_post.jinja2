@@ -1,0 +1,30 @@
+
+{% extends 'layout.jinja2' %}
+{% block subtitle  %}Add Post - {% endblock %}
+{% block content %}
+
+<!-- <form action="/update">
+    PostName <input type="Text" name="post_name" value="{{post.name }}">
+    Textarea <textarea Name="textarea">{{ post.data}}</textarea>
+    <input type="hidden" value="{{post.id}}" id="post_id" name="post_id">
+    <input type="submit" name="submit" value="Edit Post">
+</form> -->
+
+<p>
+ <strong> Edit Post </strong>
+</p>
+<form action="/update_post" method="POST">
+    <input type="hidden" name="user_id" value="{{user_id}}">
+    <div class="form-group">
+         <input type="hidden" value="{{post.id}}" id="post_id" name="post_id">
+        PostName <input type="Text" name="post_name" placeholder="Enter the Post Name" value="{{post.name }}">
+  </div>
+  <div class="form-group">
+    <textarea class="form-control" name="textarea" rows="10" cols="60" placeholder="Enter the content">{{ post.data}}</textarea>
+</div>
+<div class="form-group">
+    <button type="submit" name="submit" value="Add Post" class="btn btn-default">Add Post</button>
+</div>
+</form>
+
+{% endblock %}

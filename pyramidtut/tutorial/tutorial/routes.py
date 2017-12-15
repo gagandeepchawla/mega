@@ -1,0 +1,15 @@
+def includeme(config):
+    config.add_static_view('static', 'static', cache_max_age=3600)
+    config.add_route('home', '/')
+    config.add_route('new_user','/new_user')
+    config.add_route('store_new_user','store_new_user')
+    config.add_route('login_form','/login_form')
+    config.add_route('login','/login')
+    config.add_route('logout','/logout')
+    #posts routes
+    config.add_route('post','/')
+    config.add_route('add_post','/add_post')
+    config.add_route('storepost','/storepost')
+    config.add_route('edit_post','/{postname}/edit_post')
+    config.add_route('update_post', '/update_post')
+    config.add_route('delete_post','/{postname}/delete_post')

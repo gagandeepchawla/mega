@@ -1,0 +1,25 @@
+{% extends 'layout.jinja2' %}
+
+{% block title %}Add New User - {% endblock title %}
+
+{% block content %}
+<p>
+    <strong>
+        Add new User
+    </strong><br>
+
+</p>
+<form action="/store_new_user" >
+    <div class="form-group">
+        <label for="login">Username</label>
+        <input type="text"   name = "UserName" >
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="PassWord">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-default">Add new User</button>
+    </div>
+</form>
+{% endblock content %}
